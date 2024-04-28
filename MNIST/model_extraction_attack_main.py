@@ -145,7 +145,7 @@ new_model = CNN()
 new_model.cuda()
 criterion = nn.MSELoss()
 optimizer = optim.SGD(new_model.parameters(), lr=0.005)
-for epoch in range(5):
+for epoch in range(20):
     running_loss = 0.0
     for i, data in enumerate(loader, 0):
         inputs, labels = data
