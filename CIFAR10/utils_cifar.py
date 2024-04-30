@@ -6,7 +6,7 @@ def test_accuracy(model, testloader):
     model.eval()
     correct = 0
     total = 0
-    with torch.no_grad():  # 不计算梯度
+    with torch.no_grad():
         for data in testloader:
             images, labels = data
             images, labels=images.cuda(), labels.cuda()
